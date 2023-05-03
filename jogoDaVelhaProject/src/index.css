@@ -1,0 +1,55 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #090104 0%, #01050D 100%);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 500;
+} 
+
+h3 {
+  font-size: 1.938rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.563rem;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+p,
+label {
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.small {
+  font-size: .625rem;
+  font-weight: 100;
+}
