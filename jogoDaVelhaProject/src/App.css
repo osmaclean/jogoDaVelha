@@ -108,6 +108,10 @@ h1,h3 {
 }
 
 
+.redBorder {
+  border: 5px solid #ff7272;
+}
 
-
-
+.blueBorder {
+  border: 5px solid #5c59db;
+}

@@ -9,7 +9,13 @@ export default function Box({
 }) {
   return (
     <div
-      className="card"
+      className={`card ${
+        board[index] === "O"
+          ? "blueBorder"
+          : board[index] === "X"
+          ? "redBorder"
+          : ""
+      }`}
       onClick={() => {
         if (board[index] == token || board[index] == secondToken) return;
 
@@ -28,7 +34,7 @@ export default function Box({
         className="icon"
         src={
           board[index] === "O"
-            ? "./src/assets/img/bigCircle.svg"
+            ? `./src/assets/img/bigCircle.svg`
             : board[index] === "X"
             ? "./src/assets/img/bigCross.svg"
             : ""

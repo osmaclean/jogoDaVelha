@@ -8,6 +8,20 @@ function App() {
   const [board, setBoard] = useState(new Array(9).fill(""));
   const [actualPlayer, setActualPlayer] = useState(0);
   const [playerWinner, setPlayerWinner] = useState("");
+  const [h1Text, setH1Text] = useState(<h1></h1>);
+
+  const velha = () => {
+    let count = 0;
+
+    for (let i = 0; i < board.length; i++) {
+      if (board[i] != "") count++;
+    }
+
+    if (count === 9) {
+      setH1Text(<h1>Deu velha</h1>);
+    }
+    return h1Text;
+  };
 
   const checkLines = (checkToken, player) => {
     if (
@@ -74,25 +88,25 @@ function App() {
     }
   };
 
+  const checkOld = () => {
+    board.forEach((element) => {
+      if (element === "X" || (element === "O" && element != ""))
+        return setBoard;
+    });
+  };
+
   useEffect(() => {
-    console.log(board);
     checkLines(token, "Primeiro Jogador");
     checkLines(secondToken, "Segundo Jogador");
     checkVert(token, "Primeiro Jogador");
     checkVert(secondToken, "Segundo Jogador");
     checkDiag(token, "Primeiro Jogador");
     checkDiag(secondToken, "Segundo Jogador");
+    checkOld();
+    velha();
   }, [board]);
 
   const resetBoard = () => {
-    /*
-      const [token, setToken] = useState(null);
-      const [secondToken, setSecondToken] = useState(null);
-      const [board, setBoard] = useState(new Array(9).fill(""));
-      const [actualPlayer, setActualPlayer] = useState(0);
-      const [playerWinner, setPlayerWinner] = useState("");
-    */
-
     setToken(null);
     setSecondToken(null);
     setBoard(new Array(9).fill(""));
@@ -100,22 +114,6 @@ function App() {
     setPlayerWinner("");
   };
 
-  /*
-
-  Lógica do Jogo da Velha
-  
-  LINHAS 0 1 2 === Ganhou
-  LINHAS 3 4 5 === Ganhou
-  LINHAS 6 7 8 === Ganhou
-  
-  VERTICAL 0 3 6 === Ganhou
-  VERTICAL 1 4 7 === Ganhou
-  VERTICAL 2 5 8 === Ganhou
-
-  DIAGONAL 0 4 8 === Ganhou
-  DIAGONAL 2 4 6 === Ganhou
-
-  */
   return (
     <div className="App">
       {playerWinner && (
@@ -150,7 +148,7 @@ function App() {
                   setToken("O"), setSecondToken("X");
                 }}
               >
-                <img src="./assets/img/circle.png" />
+                <img src="./src/assets/img/circle.png" />
               </div>
               <div
                 className="token"
@@ -165,7 +163,7 @@ function App() {
         )}
 
         <div className="grid">
-          {board.map((index, i) => {
+          {board.map((item, i) => {
             return (
               <React.Fragment key={i}>
                 <Box
