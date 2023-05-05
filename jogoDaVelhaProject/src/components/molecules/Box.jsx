@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Box({
   board,
   setBoard,
@@ -13,6 +11,8 @@ export default function Box({
     <div
       className="card"
       onClick={() => {
+        if (board[index] == token || board[index] == secondToken) return;
+
         setActualPlayer((prev) => {
           const newPlayer = prev === 0 ? 1 : 0;
           return newPlayer;

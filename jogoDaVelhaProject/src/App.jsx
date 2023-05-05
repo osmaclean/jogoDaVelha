@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Box from "./components/molecules/Box";
 
@@ -150,7 +150,7 @@ function App() {
                   setToken("O"), setSecondToken("X");
                 }}
               >
-                <img src="./src/assets/img/circle.png" />
+                <img src="./assets/img/circle.png" />
               </div>
               <div
                 className="token"
@@ -165,17 +165,19 @@ function App() {
         )}
 
         <div className="grid">
-          {board.map((index) => {
+          {board.map((index, i) => {
             return (
-              <Box
-                board={board}
-                setBoard={setBoard}
-                token={token}
-                index={index}
-                setActualPlayer={setActualPlayer}
-                secondToken={secondToken}
-                actualPlayer={actualPlayer}
-              ></Box>
+              <React.Fragment key={i}>
+                <Box
+                  board={board}
+                  setBoard={setBoard}
+                  token={token}
+                  index={i}
+                  setActualPlayer={setActualPlayer}
+                  secondToken={secondToken}
+                  actualPlayer={actualPlayer}
+                ></Box>
+              </React.Fragment>
             );
           })}
         </div>
