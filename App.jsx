@@ -134,7 +134,7 @@ function App() {
 
       <>
         <div className="boxLogo">
-          <img className="logo" src="./src/assets/img/favicon.png" />
+          <img className="logo" src="./favicon.png" />
         </div>
         <h1>Jogo da Velha</h1>
         {token === null && (
@@ -148,7 +148,7 @@ function App() {
                   setToken("O"), setSecondToken("X");
                 }}
               >
-                <img src="./src/assets/img/circle.png" />
+                <img src="./circle.png" />
               </div>
               <div
                 className="token"
@@ -156,7 +156,7 @@ function App() {
                   setToken("X"), setSecondToken("O");
                 }}
               >
-                <img src="./src/assets/img/cross.png" />
+                <img src="./cross.png" />
               </div>
             </div>
           </>
