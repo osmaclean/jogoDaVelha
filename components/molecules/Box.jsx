@@ -34,9 +34,9 @@ export default function Box({
         className="icon"
         src={
           board[index] === "O"
-            ? `../../src/img/bigCircle.svg`
+            ? `./img/bigCircle.svg`
             : board[index] === "X"
-            ? "../../src/img/bigCross.svg"
+            ? "./img/bigCross.svg"
             : ""
         }
       />
