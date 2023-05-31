@@ -42,6 +42,7 @@ Deploy realizado pela plataforma Vercel. Clique no botão abaixo e acesse o proj
 [![portfolio](https://img.shields.io/badge/-CLIQUE%20AQUI-yellowgreen)](https://jogo-da-velha-weld-five.vercel.app)
 
 ## Como rodar
+
 Clone esse repositório em um diretório na sua máquina local, abra o diretório utilizando a sua IDE de preferência. No terminal da sua IDE, rode esses seguintes comandos:
 
 ```
