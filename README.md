@@ -44,7 +44,6 @@ Deploy realizado pela plataforma Vercel. Clique no botão abaixo e acesse o proj
 ## Como rodar
 
 Clone esse repositório em um diretório na sua máquina local, abra o diretório utilizando a sua IDE de preferência. No terminal da sua IDE, rode esses seguintes comandos:
-
 ```
 npm install
 npm run dev
