@@ -48,5 +48,4 @@ Clone esse repositório em um diretório na sua máquina local, abra o diretóri
 npm install
 npm run dev
 ```
-
 ### OBS: Requer o Node.js instalado em sua máquina.
